@@ -1,7 +1,9 @@
 :root{
     --b-color: rgb(250, 250, 250);
     --border-color: rgb(200,200,200);
-    --text-color: rgb(100,100,100)
+    --text-color: rgb(100,100,100);
+    --highlight: rgb(255, 255, 200)
+
 }
 
 html{
@@ -46,10 +48,23 @@ ul{
     padding: 25px;
     flex: 0 0 Calc(40% - 50px);
     border-right: 1px solid var(--border-color);
+    color: var(--text-color);
+    word-wrap: break-word;
+    overflow: auto;
+    height: Calc(100vh - 50px);
 }
 
 .text2{
     padding: 25px;
     flex: 0 0 Calc(40% - 53px);
     border-right: 1px solid var(--border-color);
+    color: var(--text-color);
+    word-wrap: break-word;
+    overflow: auto;
+    height: Calc(100vh - 50px);
+}
+
+u{
+    text-decoration: none;
+    background-color: var(--highlight);
 }

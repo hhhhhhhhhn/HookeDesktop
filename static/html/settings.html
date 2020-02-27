@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <script src="../js/settings.js"></script>
+    <link rel="stylesheet" href="../css/settings.css">
+</head>
+<body>
+    <a href="./home.html"><b>Go Back</b></a>
+    <h1>Settings</h1>
+    <ul>
+        <li><p>Language:</p><select id="language"><option value="english">English</option><option value="spanish">Spanish</option></select><p></p></li>
+        <li><p>Minimum Match Score:</p><input type="number" value=5 id="minScore"><p></p></li>
+        <li><p>Google Custom Search API key:</p><input type="text" id="apikey"><p>// If not provided, Hooke will scrape the results (Use at your own risk)</p></li>
+        <li><p>Google Custom Search Engine ID:</p><input type="text" id="engineid"><p>// If not provided, Hooke will scrape the results (Use at your own risk)</p></li>
+        <li><p>Shingle Size:</p><input type="number" value=2 id="shingleSize"><p></p></li>
+        <li><p>Maximum Match Gap:</p><input type="number" value=3 id="maximumGap"><p></p></li>
+        <li><p>Minimum Match Length:</p><input type="number" value=5 id="minimumClusterSize"><p></p></li>
+    </ul>
+    <button>Save</button>
+</body>
+</html>

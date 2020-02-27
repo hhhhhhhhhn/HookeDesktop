@@ -1,0 +1,23 @@
+{
+  "name": "hookedesktop",
+  "version": "1.0.0",
+  "description": "Open source plagiarism detector and autocitation software",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oekshido/HookeDesktop.git"
+  },
+  "author": "oekshido",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oekshido/HookeDesktop/issues"
+  },
+  "homepage": "https://github.com/oekshido/HookeDesktop#readme",
+  "dependencies": {
+    "electron": "^8.0.2"
+  }
+}

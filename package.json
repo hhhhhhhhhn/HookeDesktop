@@ -18,11 +18,11 @@
   },
   "homepage": "https://github.com/oekshido/HookeDesktop#readme",
   "dependencies": {
-    "electron": "^8.0.2",
     "electron-store": "^5.1.1",
     "hookejs": "^1.1.6"
   },
   "devDependencies": {
+    "electron": "^8.0.2",
     "electron-rebuild": "^1.10.0"
   }
 }

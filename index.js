@@ -56,7 +56,7 @@ ipcMain.on("send", (event, ...args)=>{
 ipcMain.handle("match", async (event, ...args) => {
   var settings = {
     ...JSON.parse(store.get("settings") || "{}"),
-    ...{inputText: text}
+    ...{text: text}
   }
   const result = await hooke.match(settings)
   return sourcesToHTML(result, text, settings)

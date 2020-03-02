@@ -1,11 +1,13 @@
 {
   "name": "hookedesktop",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Open source plagiarism detector and autocitation software",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron ."
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder -mlw --publish onTag"
   },
   "repository": {
     "type": "git",
@@ -24,5 +26,10 @@
   "devDependencies": {
     "electron": "^8.0.2",
     "electron-rebuild": "^1.10.0"
+  },
+  "build":{
+    "appid": "com.hooke.app",
+    "productName": "Hooke Desktop",
+    "copyright": "Copyright (c) 2020 oekshido"
   }
 }

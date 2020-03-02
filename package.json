@@ -21,13 +21,13 @@
   "homepage": "https://github.com/oekshido/HookeDesktop#readme",
   "dependencies": {
     "electron-store": "^5.1.1",
-    "hookejs": "^1.1.6"
+    "hookejs": "^1.2.0"
   },
   "devDependencies": {
     "electron": "^8.0.2",
     "electron-rebuild": "^1.10.0"
   },
-  "build":{
+  "build": {
     "appid": "com.hooke.app",
     "productName": "Hooke Desktop",
     "copyright": "Copyright (c) 2020 oekshido"

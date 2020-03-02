@@ -28,8 +28,11 @@
     "electron-rebuild": "^1.10.0"
   },
   "build": {
-    "appid": "com.hooke.app",
+    "appId": "com.hooke.app",
     "productName": "Hooke Desktop",
-    "copyright": "Copyright (c) 2020 oekshido"
+    "copyright": "Copyright (c) 2020 oekshido",
+    "win": {
+      "icon": "./static/images/favicon.png"
+    }
   }
 }

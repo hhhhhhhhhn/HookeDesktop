@@ -1,0 +1,25 @@
+:root{
+    --text-color: rgb(100,100,100);
+}
+
+html{
+    font-family: sans-serif;
+}
+
+a:link, a:visited, a:hover, a:active {
+    color: black;
+    text-decoration: none;
+}
+
+#text{
+    margin-left: 2vw;
+    margin-right: 2vw;
+    margin-top: 3vh;
+    margin-top: 3vh;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+p{
+    color: var(--text-color);
+}

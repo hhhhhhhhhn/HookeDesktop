@@ -27,7 +27,7 @@ document.addEventListener("click", (e)=>{
 const {ipcRenderer} = require("electron");
 
 window.onload = async()=>{
-    var [links, inputs, texts] = await ipcRenderer.invoke("recieve")
+    var [links, inputs, texts] = await ipcRenderer.invoke("match")
     setTexts(links, inputs, texts)
     if(links){
         document.getElementById("text1").innerHTML = inputTexts[links[0]]

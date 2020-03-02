@@ -1,3 +1,7 @@
+function textToHTML(text){
+    return `<p>${text}</p>`.replace(new RegExp("\t","gi"), " ").replace(new RegExp("\n","gi"), "</p><p>").replace(new RegExp("<p>[\n ]*</p>", "gi"), "")
+}
+
 function sourceToHTML(source, originalText, {minScore = 5}={}){
     comparedText = source.text
     originalTextCopy = originalText
@@ -27,4 +31,4 @@ function sourcesToHTML(sources, originalText, {minScore = 5}={}){
     return [links, inputs, compared]
 }
 
-module.exports = {sourceToHTML, sourcesToHTML}
+module.exports = {sourceToHTML, sourcesToHTML, textToHTML}

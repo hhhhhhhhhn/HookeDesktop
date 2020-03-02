@@ -1,6 +1,6 @@
 const {app, BrowserWindow, ipcMain} = require('electron')
 const hooke = require("hookejs")
-const {sourcesToHTML} = require("./tools.js")
+const {sourcesToHTML, textToHTML} = require("./tools.js")
 const Store = require('electron-store');
 const store = new Store();
 
@@ -22,7 +22,9 @@ function createWindow () {
   mainWindow.loadFile('./static/html/home.html')
 
   // Open the DevTools.
-  //mainWindow.webContents.openDevTools()
+  if(process.argv[2] == "test"){
+    mainWindow.webContents.openDevTools()
+  }
 }
 
 // This method will be called when Electron has finished
@@ -51,11 +53,21 @@ ipcMain.on("send", (event, ...args)=>{
   text = args[0]
 })
 
-ipcMain.handle("recieve", async (event, ...args) => {
+ipcMain.handle("match", async (event, ...args) => {
   var settings = {
     ...JSON.parse(store.get("settings") || "{}"),
     ...{inputText: text}
   }
   const result = await hooke.match(settings)
   return sourcesToHTML(result, text, settings)
+})
+
+ipcMain.handle("autocitation", async (event, ...args) => {
+  var settings = {
+    ...JSON.parse(store.get("settings") || "{}"),
+    ...{text: text},
+    replace: true
+  }
+  const result = await hooke.autoCitation(settings)
+  return textToHTML(result)
 })

@@ -29,7 +29,7 @@ const {ipcRenderer} = require("electron");
 window.onload = async()=>{
     var [links, inputs, texts] = await ipcRenderer.invoke("match")
     setTexts(links, inputs, texts)
-    if(links){
+    if(inputTexts[links[0]]){
         document.getElementById("text1").innerHTML = inputTexts[links[0]]
         document.getElementById("text2").innerHTML = comparedTexts[links[0]]
     }else{

@@ -15,7 +15,6 @@ function setTexts(links, inputs, texts){
 document.addEventListener("click", (e)=>{
     if(e.target.tagName == "A"){
         if(e.target.innerText != "Go Back"){
-            console.log(e.target.innerText != "Go Back", e.target.innerHTML)
             e.preventDefault()
             document.getElementById("text2").innerHTML = comparedTexts[e.target.innerText]
             document.getElementById("text1").innerHTML = inputTexts[e.target.innerText]

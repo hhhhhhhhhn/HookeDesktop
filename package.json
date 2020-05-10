@@ -1,6 +1,6 @@
 {
   "name": "hookedesktop",
-  "version": "0.1.2",
+  "version": "0.1.5",
   "description": "Open source plagiarism detector and autocitation software",
   "main": "index.js",
   "scripts": {
@@ -21,11 +21,10 @@
   "homepage": "https://github.com/oekshido/HookeDesktop#readme",
   "dependencies": {
     "electron-store": "^5.1.1",
-    "hookejs": "^1.2.1"
+    "hookejs": "^1.3.0"
   },
   "devDependencies": {
-    "electron": "^8.0.2",
-    "electron-rebuild": "^1.10.0"
+    "electron": "^8.2.5"
   },
   "build": {
     "appId": "com.hooke.app",
